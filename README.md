@@ -1,3 +1,9 @@
+# To install moviepy library write the following command in the command window
+pip install moviepy
+# To verify that the library is installed write the following command:
+pip show moviepy
+
+# Now write the following code in python
 from moviepy.editor import VideoFileClip
 
 # Define the input video file and output audio file
