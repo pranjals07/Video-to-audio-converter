@@ -1,15 +1,20 @@
-# Video-to-audio-converter
-This is a Video to Audio converter which takes a .mp4 file as input and download its .mp3 version. This is a minor project I have made using python 
-Here in the code I have input the file named song.mp4 and coverted it into mp3 file and saved it in the file named audio.mp3.
-# Requirements
-1. Python
-2. moviepy library
-# How to install moviepy
-Write the following command in the Command Window:
+from moviepy.editor import VideoFileClip
 
-pip install moviepy
+# Define the input video file and output audio file
+mp4_file = "song.mp4"
+mp3_file = "audio.mp3"
 
-To verify if the library is installed:
+# Load the video clip
+video_clip = VideoFileClip(mp4_file)
 
-pip show moviepy
+# Extract the audio from the video clip
+audio_clip = video_clip.audio
 
+# Write the audio to a separate file
+audio_clip.write_audiofile(mp3_file)
+
+# Close the video and audio clips
+audio_clip.close()
+video_clip.close()
+
+print("Audio extraction successful!")
