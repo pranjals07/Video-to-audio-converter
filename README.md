@@ -6,7 +6,10 @@ Here in the code I have input the file named song.mp4 and coverted it into mp3 f
 2. moviepy library
 # How to install moviepy
 Write the following command in the Command Window:
+
 pip install moviepy
+
 To verify if the library is installed:
+
 pip show moviepy
 
